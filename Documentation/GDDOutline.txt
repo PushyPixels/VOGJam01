@@ -5,7 +5,7 @@ A simple 1st person shooter based on game quality assurance where the goal is to
 
 The basic design:
 	The game is presented as a sprite-based 1st person shooter, similar to Doom.  There will be at least one weapon (A basic raycast gun) and one enemy type (Walk toward you and fire).  Each level has a goal to reach to beat it.
-	Additionally, at any time you can bring up a debug display that gives you options such as invulnerability and infinite ammo.  It also allows you to mark an area where you think there's a bug by pointing at it.  You can also mark an area by being inside of it.  When an area is marked as a bug, if it's valid, a bug report will automatically be generated and displayed to the player
+	Additionally, at any time you can bring up a debug display that gives you options such as invulnerability and infinite ammo.  It also allows you to mark an area where you think there's a bug by pointing at it.  You can also mark an area by being inside of it.  When an area is marked as a bug, if it's valid, a bug report will automatically be generated and displayed to the player.
 
 Bug types:
 	Collision: Colliders can have a chance to not be active.  To find these, the player will have to push against walls or shoot them to see if they properly collide.
