@@ -16,6 +16,7 @@ Bug types:
 	Bonus: If the player gets out of the level, even if it wasn't intended for a bug to allow that, we give the player points.
 
 	Particles persisting after use (Like our bug with the cactus man's blood)
+	Skipping levels
 	
 Additional stuff we'd like to do:
 	I'd like to show the Debug.Log output in debug mode.
