@@ -5,6 +5,7 @@ public class DoomAI : MonoBehaviour
 {
 	public float movementSpeed = 1.0f;
 	public float closestDistance = 1.0f;
+	public float health = 1.0f;
 
 	private GameObject player;
 
@@ -33,8 +34,13 @@ public class DoomAI : MonoBehaviour
 		}
 	}
 
-	public void Damage(float amount)
+	void Damage(float amount)
 	{
-		Destroy (gameObject);
+		health -= amount;
+		if(health <= 0.0f)
+		{
+			BroadcastMessage("Die",SendMessageOptions.DontRequireReceiver);
+		}
+		//Destroy (gameObject);
 	}
 }

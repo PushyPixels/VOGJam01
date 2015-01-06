@@ -14,6 +14,8 @@ Bug types:
 	Performance: Certain areas of the level run slowly; the area that it happens has to be marked by the player.  Bonus if they can pinpoint the exact object causing the problem.
 	Incompletability: If a level can't be completed, it has to be marked as incompletable.
 	Bonus: If the player gets out of the level, even if it wasn't intended for a bug to allow that, we give the player points.
+
+	Particles persisting after use (Like our bug with the cactus man's blood)
 	
 Additional stuff we'd like to do:
 	I'd like to show the Debug.Log output in debug mode.
