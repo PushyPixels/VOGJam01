@@ -1,4 +1,4 @@
-VogJam01
+VOGJam01
 ========
 
 Theme - A Buggy Game
