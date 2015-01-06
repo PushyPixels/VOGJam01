@@ -6,9 +6,9 @@ public class KillParticlesWhenDone : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(particleSystem.IsAlive())
+		if(!particleSystem.IsAlive())
 		{
-
+			Destroy(gameObject);
 		}
 	}
 }
