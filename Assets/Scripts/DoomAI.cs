@@ -32,4 +32,9 @@ public class DoomAI : MonoBehaviour
 			}
 		}
 	}
+
+	public void Damage(float amount)
+	{
+		Destroy (gameObject);
+	}
 }
