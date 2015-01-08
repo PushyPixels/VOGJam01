@@ -26,6 +26,7 @@ GameObject:
   - 33: {fileID: 3334280}
   - 65: {fileID: 6534280}
   - 23: {fileID: 2334280}
+  - 114: {fileID: 11495516}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -44,6 +45,7 @@ GameObject:
   - 33: {fileID: 3334282}
   - 65: {fileID: 6534282}
   - 23: {fileID: 2334282}
+  - 114: {fileID: 11495518}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -62,6 +64,7 @@ GameObject:
   - 33: {fileID: 3334284}
   - 65: {fileID: 6534284}
   - 23: {fileID: 2334284}
+  - 114: {fileID: 11495520}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -80,6 +83,7 @@ GameObject:
   - 33: {fileID: 3334286}
   - 65: {fileID: 6534286}
   - 23: {fileID: 2334286}
+  - 114: {fileID: 11495522}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -98,6 +102,7 @@ GameObject:
   - 33: {fileID: 3334288}
   - 65: {fileID: 6534288}
   - 23: {fileID: 2334288}
+  - 114: {fileID: 11495524}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -377,6 +382,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11495516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfBug: .100000001
+  brokenCollisionLayer: BrokenCollision
+--- !u!114 &11495518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfBug: .100000001
+  brokenCollisionLayer: BrokenCollision
+--- !u!114 &11495520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfBug: .100000001
+  brokenCollisionLayer: BrokenCollision
+--- !u!114 &11495522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfBug: .100000001
+  brokenCollisionLayer: BrokenCollision
+--- !u!114 &11495524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfBug: .100000001
+  brokenCollisionLayer: BrokenCollision
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
