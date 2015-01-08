@@ -159,8 +159,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
+--- !u!1 &81546141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 147608, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 81546142}
+  - 114: {fileID: 81546143}
+  m_Layer: 8
+  m_Name: BugMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81546142
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 447608, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81546141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 344982372}
+  m_RootOrder: 1
+--- !u!114 &81546143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81546141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5649dee7f44e4e9cab0e303c6ad355b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: Fire2
 --- !u!1 &99554848
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &177947847
@@ -391,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1001 &207848758
@@ -522,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &303983155
@@ -796,6 +840,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1580527144}
+  - {fileID: 81546142}
   m_Father: {fileID: 1647994037}
   m_RootOrder: 1
 --- !u!1001 &376723917
@@ -999,6 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &528200682
@@ -1186,6 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &666675128
@@ -1755,6 +1802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &1436341941
@@ -2001,6 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &1580527143
@@ -2269,6 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &1788906388
@@ -2356,6 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &1832837326
@@ -2506,6 +2557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &1990002184
@@ -2593,6 +2645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1 &2036580474

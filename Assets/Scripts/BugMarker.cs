@@ -20,6 +20,7 @@ public class BugMarker : MonoBehaviour
 			RaycastHit hit;
 			if(Physics.Raycast(transform.position,transform.forward,out hit))
 			{
+				CollisionBug cb = hit.collider.GetComponent<CollisionBug>();
 				hit.collider.SendMessage("MarkBug",SendMessageOptions.DontRequireReceiver);;
 			}
 		}

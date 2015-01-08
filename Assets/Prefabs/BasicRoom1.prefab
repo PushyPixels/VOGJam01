@@ -393,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!114 &11495518
@@ -406,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!114 &11495520
@@ -419,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!114 &11495522
@@ -432,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!114 &11495524
@@ -445,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ec6750253be43ff950bc07432d5832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markedMaterial: {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
   chanceOfBug: .100000001
   brokenCollisionLayer: BrokenCollision
 --- !u!1001 &100100000
