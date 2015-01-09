@@ -26,6 +26,11 @@ public class AmmoHealth : MonoBehaviour
 		{
 			Debug.Log("Picked up health");
 
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			PlayerHealth playerHealth = player.GetComponentInParent<PlayerHealth>();
+			
+			playerHealth.currentHealth += healthAmount;
+
 		}
 		else
 		{

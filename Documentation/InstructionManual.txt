@@ -1,0 +1,2 @@
+Known issues:
+	Gun particles sometimes repeat when looking away and then back at the hit location

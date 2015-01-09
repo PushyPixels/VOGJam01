@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class DisplayAmmo : MonoBehaviour
+public class DisplayHealth : MonoBehaviour
 {	
 	private Text text;
 	private string initialText;
@@ -16,9 +16,9 @@ public class DisplayAmmo : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		GameObject currentGun = GameObject.FindGameObjectWithTag("CurrentGun");
-		Gun gun = currentGun.GetComponent<Gun>();
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		PlayerHealth playerHealth = player.GetComponentInParent<PlayerHealth>();
 
-		text.text = initialText + gun.currentAmmo.ToString() + "/" + gun.maxAmmo.ToString();
+		text.text = initialText + playerHealth.currentHealth.ToString();
 	}
 }
