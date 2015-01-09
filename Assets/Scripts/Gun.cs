@@ -18,6 +18,14 @@ public class Gun : MonoBehaviour
 		{
 			return _currentAmmo;
 		}
+		set
+		{
+			_currentAmmo = value;
+			if(_currentAmmo > maxAmmo)
+			{
+				_currentAmmo = maxAmmo;
+			}
+		}
 	}
 
 	// Use this for initialization

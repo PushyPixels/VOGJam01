@@ -17,7 +17,14 @@ public class BasicGun : Gun
 
 			HitEffect hitEffect = hit.collider.GetComponentInChildren<HitEffect>();
 
-			Instantiate(defaultHitEffect,hit.point,Quaternion.LookRotation(hit.normal));
+			if(hitEffect != null)
+			{
+				Instantiate(hitEffect.hitEffect,hit.point,Quaternion.LookRotation(hit.normal));
+			}
+			else
+			{
+				Instantiate(defaultHitEffect,hit.point,Quaternion.LookRotation(hit.normal));
+			}
 		}
 	}
 }

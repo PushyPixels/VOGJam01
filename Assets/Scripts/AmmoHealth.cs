@@ -25,12 +25,17 @@ public class AmmoHealth : MonoBehaviour
 		if(angle < 45.0f || angle > 135.0f)
 		{
 			Debug.Log("Picked up health");
+
 		}
 		else
 		{
 			Debug.Log("Picked up ammo");
+			GameObject currentGun = GameObject.FindGameObjectWithTag("CurrentGun");
+			Gun gun = currentGun.GetComponent<Gun>();
+
+			gun.currentAmmo += ammoAmount;
 		}
 
-		//Destroy(
+		//Destroy(gameObject);
 	}
 }
