@@ -6,7 +6,7 @@ public class AmmoHealth : MonoBehaviour
 	public GameObject healthEffect;
 	public GameObject ammoEffect;
 
-	public int ammoAmount = 50;
+	public float ammoPercentage = 0.5f;
 	public float healthAmount = 50.0f;
 
 	// Use this for initialization
@@ -42,7 +42,7 @@ public class AmmoHealth : MonoBehaviour
 			GameObject currentGun = GameObject.FindGameObjectWithTag("CurrentGun");
 			Gun gun = currentGun.GetComponent<Gun>();
 
-			gun.currentAmmo += ammoAmount;
+			gun.currentAmmo += (int)(gun.maxAmmo*ammoPercentage);
 
 			Instantiate(ammoEffect,transform.position,Quaternion.identity);
 		}
