@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 473454}
   - 33: {fileID: 3373458}
   - 23: {fileID: 2373458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 473456}
   - 33: {fileID: 3373460}
   - 23: {fileID: 2373460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 473458}
   - 33: {fileID: 3373462}
   - 23: {fileID: 2373462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mask Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 473460}
   - 33: {fileID: 3373464}
   - 23: {fileID: 2373464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 473462}
   - 33: {fileID: 3373466}
   - 23: {fileID: 2373466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mask Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 473464}
   - 33: {fileID: 3373468}
   - 23: {fileID: 2373468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 4: {fileID: 473466}
   - 33: {fileID: 3373470}
   - 23: {fileID: 2373470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 473468}
   - 33: {fileID: 3373472}
   - 23: {fileID: 2373472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - 4: {fileID: 473470}
   - 33: {fileID: 3373474}
   - 23: {fileID: 2373474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473472}
-  m_Layer: 0
+  - 65: {fileID: 6559506}
+  - 54: {fileID: 5459506}
+  - 114: {fileID: 11459506}
+  m_Layer: 9
   m_Name: PowerUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +179,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +196,7 @@ GameObject:
   - 4: {fileID: 473476}
   - 33: {fileID: 3373476}
   - 23: {fileID: 2373476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +213,7 @@ GameObject:
   - 4: {fileID: 473478}
   - 33: {fileID: 3373478}
   - 23: {fileID: 2373478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mask One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +230,7 @@ GameObject:
   - 4: {fileID: 473480}
   - 33: {fileID: 3373480}
   - 23: {fileID: 2373480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +247,7 @@ GameObject:
   - 4: {fileID: 473482}
   - 33: {fileID: 3373482}
   - 23: {fileID: 2373482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +264,7 @@ GameObject:
   - 4: {fileID: 473484}
   - 33: {fileID: 3373484}
   - 23: {fileID: 2373484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mask One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +281,7 @@ GameObject:
   - 4: {fileID: 473486}
   - 33: {fileID: 3373486}
   - 23: {fileID: 2373486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +298,7 @@ GameObject:
   - 4: {fileID: 473488}
   - 33: {fileID: 3373488}
   - 23: {fileID: 2373488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +315,7 @@ GameObject:
   - 4: {fileID: 473490}
   - 33: {fileID: 3373490}
   - 23: {fileID: 2373490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +332,7 @@ GameObject:
   - 4: {fileID: 473492}
   - 33: {fileID: 3373492}
   - 23: {fileID: 2373492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,8 +454,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.85000002, z: 2.72000003}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 473482}
   - {fileID: 473468}
@@ -1081,6 +1084,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173492}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5459506
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173472}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6559506
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11459506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769266a4fbca34330b6867e1c0a379be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthEffect: {fileID: 106074, guid: e7ea9b6095251425ea0b1f6763358305, type: 2}
+  ammoEffect: {fileID: 106074, guid: f1d05aa564ef746dbbcb49d4ababe537, type: 2}
+  ammoAmount: 50
+  healthAmount: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

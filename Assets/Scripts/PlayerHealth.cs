@@ -22,4 +22,9 @@ public class PlayerHealth : MonoBehaviour
 			}
 		}
 	}
+
+	void Start()
+	{
+		_currentHealth = initialHealth;
+	}
 }

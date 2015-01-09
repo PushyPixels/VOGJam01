@@ -3,8 +3,11 @@ using System.Collections;
 
 public class AmmoHealth : MonoBehaviour
 {
-	public int ammoAmount = 10;
-	public float healthAmount = 10.0f;
+	public GameObject healthEffect;
+	public GameObject ammoEffect;
+
+	public int ammoAmount = 50;
+	public float healthAmount = 50.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -31,6 +34,7 @@ public class AmmoHealth : MonoBehaviour
 			
 			playerHealth.currentHealth += healthAmount;
 
+			Instantiate(healthEffect,transform.position,Quaternion.identity);
 		}
 		else
 		{
@@ -39,8 +43,10 @@ public class AmmoHealth : MonoBehaviour
 			Gun gun = currentGun.GetComponent<Gun>();
 
 			gun.currentAmmo += ammoAmount;
+
+			Instantiate(ammoEffect,transform.position,Quaternion.identity);
 		}
 
-		//Destroy(gameObject);
+		Destroy(gameObject);
 	}
 }
