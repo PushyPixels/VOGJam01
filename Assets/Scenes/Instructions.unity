@@ -149,7 +149,7 @@ MonoBehaviour:
 
     Infinite lives are enabled on this build.  If you find a bug in an object that
     you ended up destroying or collecting before you tag it, just find a way to reset
-    level.  Cactus men can help.
+    the level.  Cactus men can help.
 
 
     Press any key to continue.'

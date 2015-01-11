@@ -2,53 +2,56 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CollisionBug : MonoBehaviour
+public class AmmoHealthBug : MonoBehaviour
 {
-	public Material markedMaterial;
-
-	public float chanceOfBug = 0.1f;
+	public GameObject marker;
 	public string brokenCollisionLayer = "BrokenCollision";
-	private Material originalMaterial;
+	public int originalLayer;
+	public float chanceOfBug = 0.1f;
 
-	[HideInInspector]
-	public bool marked = false;
-	[HideInInspector]
-	public bool bugged = false;
+	private bool bugged = false;
+	private bool marked = false;
 
-	private static List<CollisionBug> collisionBugs = new List<CollisionBug>();
+	private static List<AmmoHealthBug> ammoHealthBugs = new List<AmmoHealthBug>();
 
 	// Use this for initialization
 	void Start ()
 	{
-		originalMaterial = renderer.sharedMaterial;
+		originalLayer = gameObject.layer;
 		if(Random.value < chanceOfBug)
 		{
 			bugged = true;
-			gameObject.layer = LayerMask.NameToLayer(brokenCollisionLayer);
-			Debug.Log("I'm not colliding right!", gameObject);
+
+			AmmoHealth ammoHealth = GetComponent<AmmoHealth>();
+			ammoHealth.ammoPercentage *= -1.0f;
+			ammoHealth.healthAmount *= -1.0f;
+
+			Debug.Log("I'm an evil powerup!", gameObject);
 		}
 	}
 
 	void OnEnable()
 	{
-		collisionBugs.Add(this);
+		ammoHealthBugs.Add(this);
 	}
-
+	
 	void OnDisable()
 	{
-		collisionBugs.Remove(this);
+		ammoHealthBugs.Remove(this);
 	}
 
 	void MarkBug()
 	{
 		if(!marked)
 		{
-			renderer.sharedMaterial = markedMaterial;
+			marker.SetActive(true);
+			gameObject.layer = LayerMask.NameToLayer(brokenCollisionLayer);
 			marked = true;
 		}
 		else
 		{
-			renderer.sharedMaterial = originalMaterial;
+			gameObject.layer = originalLayer;
+			marker.SetActive(false);
 			marked = false;
 		}
 	}
@@ -56,8 +59,8 @@ public class CollisionBug : MonoBehaviour
 	public static ScoreInfo EvaluateScore()
 	{
 		ScoreInfo scoreInfo = new ScoreInfo();
-
-		foreach(CollisionBug bug in collisionBugs)
+		
+		foreach(AmmoHealthBug bug in ammoHealthBugs)
 		{
 			if(bug.marked && bug.bugged)
 			{
@@ -69,13 +72,19 @@ public class CollisionBug : MonoBehaviour
 				Debug.Log("Minus one point for marking something that's not a bug!");
 				scoreInfo.penalty++;
 			}
-
+			
 			if(bug.bugged)
 			{
 				scoreInfo.maxScore++;
 			}
 		}
-
+		
 		return scoreInfo;
+	}
+
+	
+	// Update is called once per frame
+	void Update (){
+	
 	}
 }
