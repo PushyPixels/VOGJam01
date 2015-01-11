@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CollisionBug : MonoBehaviour
 {
@@ -8,8 +9,13 @@ public class CollisionBug : MonoBehaviour
 	public float chanceOfBug = 0.1f;
 	public string brokenCollisionLayer = "BrokenCollision";
 	private Material originalMaterial;
-	private bool marked = false;
-	private bool bugged = false;
+
+	[HideInInspector]
+	public bool marked = false;
+	[HideInInspector]
+	public bool bugged = false;
+
+	private static List<CollisionBug> collisionBugs = new List<CollisionBug>();
 
 	// Use this for initialization
 	void Start ()
@@ -21,6 +27,17 @@ public class CollisionBug : MonoBehaviour
 			gameObject.layer = LayerMask.NameToLayer(brokenCollisionLayer);
 			Debug.Log("I'm not colliding right!", gameObject);
 		}
+	}
+
+	void OnEnable()
+	{
+		collisionBugs.Add(this);
+	}
+
+	void OnDisable()
+	{
+		collisionBugs.Remove(this);
+		Debug.Log("Disabling!");
 	}
 
 	void MarkBug()
@@ -37,19 +54,29 @@ public class CollisionBug : MonoBehaviour
 		}
 	}
 
-	void OnDestroy()
+	public static ScoreInfo EvaluateScore()
 	{
-		if(marked && bugged)
+		ScoreInfo scoreInfo = new ScoreInfo();
+
+		foreach(CollisionBug bug in collisionBugs)
 		{
-			Debug.Log("Plus one point for marking a bug correctly!");
+			if(bug.marked && bug.bugged)
+			{
+				Debug.Log("Plus one point for marking a bug correctly!");
+				scoreInfo.score++;
+			}
+			else if(bug.marked && !bug.bugged)
+			{
+				Debug.Log("Minus one point for marking something that's not a bug!");
+				scoreInfo.penalty++;
+			}
+
+			if(bug.bugged)
+			{
+				scoreInfo.maxScore++;
+			}
 		}
-		else if(marked && !bugged)
-		{
-			Debug.Log("Minus one point for marking something that's not a bug!");
-		}
-		else if(!marked && bugged)
-		{
-			Debug.Log("Minus one point for missing a bug!");
-		}
+
+		return scoreInfo;
 	}
 }
