@@ -30,6 +30,7 @@ GameObject:
   - 114: {fileID: 11456948}
   - 114: {fileID: 11456944}
   - 95: {fileID: 9577188}
+  - 82: {fileID: 8245264}
   m_Layer: 0
   m_Name: JeffreyHead
   m_TagString: Untagged
@@ -77,6 +78,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &8245264
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156946}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9577188
 Animator:
   serializedVersion: 3
@@ -105,7 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   closestDistance: 1
-  health: 1
+  health: 10
+  hitSound: {fileID: 8300000, guid: c617fbc4533d546788262a6ae08ca2f4, type: 3}
+  deathSound: {fileID: 154570, guid: ab2e81b9a05ba431783d30906715622e, type: 2}
   projectile: {fileID: 169168, guid: 91b96d2c94b604079b0e4b4d8fbdae73, type: 2}
   attackPosition: {fileID: 456944}
   attackFrame: {fileID: 21300000, guid: e1c96effc7b844c53a9508cf516f6615, type: 3}

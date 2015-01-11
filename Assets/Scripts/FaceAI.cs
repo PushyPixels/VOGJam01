@@ -7,6 +7,9 @@ public class FaceAI : MonoBehaviour
 	public float closestDistance = 1.0f;
 	public float health = 1.0f;
 
+	public AudioClip hitSound;
+	public GameObject deathSound;
+
 	public GameObject projectile;
 	public Transform attackPosition;
 	public Sprite attackFrame;
@@ -64,9 +67,11 @@ public class FaceAI : MonoBehaviour
 	
 	void Damage(float amount)
 	{
+		audio.PlayOneShot(hitSound);
 		health -= amount;
 		if(health <= 0.0f)
 		{
+			Instantiate (deathSound,transform.position,Quaternion.identity);
 			BroadcastMessage("Die",SendMessageOptions.DontRequireReceiver);
 		}
 		//Destroy (gameObject);
