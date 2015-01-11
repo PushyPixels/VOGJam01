@@ -33,6 +33,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11407126}
+  - 114: {fileID: 11431526}
   m_Layer: 8
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -66,6 +67,22 @@ GameObject:
 --- !u!1002 &100005
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!1 &131526
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431526}
+  - 114: {fileID: 11447608}
+  m_Layer: 8
+  m_Name: BasicGun
+  m_TagString: CurrentGun
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &135422
 GameObject:
   m_ObjectHideFlags: 1
@@ -74,9 +91,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 435422}
-  - 114: {fileID: 11447608}
+  - 114: {fileID: 11431528}
   m_Layer: 8
-  m_Name: BasicGun
+  m_Name: MachineGun
   m_TagString: CurrentGun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -156,13 +173,26 @@ Transform:
   m_LocalPosition: {x: 0, y: .907083511, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 435422}
+  - {fileID: 431526}
   - {fileID: 447608}
+  - {fileID: 435422}
   m_Father: {fileID: 400002}
   m_RootOrder: 1
 --- !u!1002 &400005
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!4 &431526
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400004}
+  m_RootOrder: 0
 --- !u!4 &435422
 Transform:
   m_ObjectHideFlags: 1
@@ -174,7 +204,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &447606
 Transform:
   m_ObjectHideFlags: 1
@@ -412,8 +442,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aad7cdb8acc742e196c170af188800e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHealth: 100
+  initialHealth: 50
   maxHealth: 100
+--- !u!114 &11431526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d16309de11043b5ad9e9e792ca155b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 131526}
+  - {fileID: 135422}
+  switchWeaponButtonName: SwitchWeapon
+--- !u!114 &11431528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570d6ccd73ca24916a09cf0e46c8afe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireButton: Fire1
+  fireDelay: .0500000007
+  damage: 1
+  initialAmmo: 100
+  maxAmmo: 500
+  defaultHitEffect: {fileID: 174516, guid: 48fff1a93e1ee4117ad55eacc44afe26, type: 2}
 --- !u!114 &11435422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,23 +487,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5649dee7f44e4e9cab0e303c6ad355b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: Fire2
+  buttonName: MarkBug
 --- !u!114 &11447608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135422}
+  m_GameObject: {fileID: 131526}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fc0be9044b9b4a0ca1cba7106113c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireButton: Fire1
-  fireDelay: .100000001
+  fireDelay: .300000012
   damage: 1
-  initialAmmo: 10
-  maxAmmo: 100
+  initialAmmo: 0
+  maxAmmo: 0
   defaultHitEffect: {fileID: 174516, guid: 48fff1a93e1ee4117ad55eacc44afe26, type: 2}
 --- !u!124 &12400000
 Behaviour:

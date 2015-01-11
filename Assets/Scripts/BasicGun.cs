@@ -5,6 +5,14 @@ public class BasicGun : Gun
 {
 	public GameObject defaultHitEffect;
 
+	void Update()
+	{
+		if(Input.GetButtonDown(fireButton) && _canFire)
+		{
+			Fire();
+		}
+	}
+
 	protected override void Fire()
 	{
 		base.Fire();

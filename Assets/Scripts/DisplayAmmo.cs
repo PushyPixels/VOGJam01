@@ -19,6 +19,13 @@ public class DisplayAmmo : MonoBehaviour
 		GameObject currentGun = GameObject.FindGameObjectWithTag("CurrentGun");
 		Gun gun = currentGun.GetComponent<Gun>();
 
-		text.text = initialText + gun.currentAmmo.ToString() + "/" + gun.maxAmmo.ToString();
+		if(gun.maxAmmo > 0)
+		{
+			text.text = initialText + gun.currentAmmo.ToString() + "/" + gun.maxAmmo.ToString();
+		}
+		else
+		{
+			text.text = initialText + "<b>∞</b>"; // + infinitySymbolSizeOverride + ">∞</size>";
+		}
 	}
 }

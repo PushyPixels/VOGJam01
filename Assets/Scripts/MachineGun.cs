@@ -5,6 +5,14 @@ public class MachineGun : Gun
 {
 	public GameObject defaultHitEffect;
 
+	void Update()
+	{
+		if(Input.GetButton(fireButton) && _currentAmmo > 0 && _canFire)
+		{
+			Fire();
+		}
+	}
+
 	protected override void Fire()
 	{
 		base.Fire();

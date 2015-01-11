@@ -34,15 +34,6 @@ public class Gun : MonoBehaviour
 		_currentAmmo = initialAmmo;
 	}
 
-	// Update is called once per frame
-	void Update ()
-	{
-		if(Input.GetButtonDown(fireButton) && _currentAmmo > 0 && _canFire)
-		{
-			Fire();
-		}
-	}
-
 	protected virtual void Fire()
 	{
 		_currentAmmo--;
