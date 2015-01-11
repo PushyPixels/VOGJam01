@@ -8,6 +8,7 @@ public class DoomAI : MonoBehaviour
 	public float damageDistance = 0.5f;
 	public float damagePerSecond = 1.0f;
 	public float health = 1.0f;
+	public bool lookAtPlayer = true;
 
 	private GameObject player;
 
@@ -27,7 +28,10 @@ public class DoomAI : MonoBehaviour
 		{
 			Vector3 vectorToPlayer = player.transform.position - transform.position;
 
-			transform.rotation = Quaternion.LookRotation(vectorToPlayer);
+			if(lookAtPlayer)
+			{
+				transform.rotation = Quaternion.LookRotation(vectorToPlayer);
+			}
 
 			float distance = vectorToPlayer.magnitude;
 

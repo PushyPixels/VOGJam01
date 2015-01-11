@@ -16,4 +16,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test3.unity
   - enabled: 1
+    path: Assets/Scenes/Bonus.unity
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
