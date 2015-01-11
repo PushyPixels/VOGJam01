@@ -131,7 +131,7 @@ MonoBehaviour:
   movementSpeed: 1
   closestDistance: 1
   health: 1
-  projectile: {fileID: 156946, guid: fb41f3d29c6034865ab43bb5e64e9f25, type: 2}
+  projectile: {fileID: 176522, guid: b63e38b1f225b4ceba0265abd58c9908, type: 2}
   attackPosition: {fileID: 469170}
   attackFrame: {fileID: 21300000, guid: 86df82d0eb50d4623ba3961acd9ae16b, type: 3}
   attackFrameTime: .5
