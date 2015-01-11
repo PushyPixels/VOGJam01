@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &131526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431526}
+  - 114: {fileID: 11431526}
+  m_Layer: 0
+  m_Name: GibLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &196798
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +28,6 @@ GameObject:
   - 136: {fileID: 13636022}
   - 54: {fileID: 5436022}
   - 114: {fileID: 11496798}
-  - 114: {fileID: 11472460}
   - 114: {fileID: 11402136}
   m_Layer: 0
   m_Name: Cactus Man
@@ -21,6 +36,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &431526
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 496798}
+  m_RootOrder: 0
 --- !u!4 &496798
 Transform:
   m_ObjectHideFlags: 1
@@ -30,7 +57,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 431526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!54 &5436022
@@ -60,19 +88,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 149380, guid: 6ab6c55e7310c421596668597ecf92b4, type: 2}
---- !u!114 &11472460
+--- !u!114 &11431526
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196798}
+  m_GameObject: {fileID: 131526}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afa53ccfeeef549f3b7f4be485500ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gib: {fileID: 126224, guid: 574f3b992f3de4cc794ce14cfb72836a, type: 2}
-  objectToDestroy: {fileID: 0}
+  objectToDestroy: {fileID: 196798}
 --- !u!114 &11496798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   closestDistance: 2
+  damageDistance: 2.5
+  damagePerSecond: 5
   health: 10
 --- !u!136 &13636022
 CapsuleCollider:

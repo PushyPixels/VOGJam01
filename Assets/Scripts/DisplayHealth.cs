@@ -17,8 +17,7 @@ public class DisplayHealth : MonoBehaviour
 	void Update ()
 	{
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		PlayerHealth playerHealth = player.GetComponentInParent<PlayerHealth>();
 
-		text.text = playerHealth.currentHealth.ToString() + initialText;
+		text.text = PlayerHealth.currentHealth.ToString("F1") + initialText;
 	}
 }

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerSingleton : MonoBehaviour
+public class RandomManager : MonoBehaviour
 {
-	public static PlayerSingleton Instance;
+	public static RandomManager Instance;
 
-	// Use this for initialization
+	public static int seed;
+
 	void Awake()
 	{
 		if(Instance == null)
@@ -14,14 +15,18 @@ public class PlayerSingleton : MonoBehaviour
 		}
 		else
 		{
-			Instance.transform.position = transform.position;
-			Instance.transform.rotation = transform.rotation;
 			Destroy(gameObject);
 			return;
 		}
 		DontDestroyOnLoad(gameObject);
 	}
 
+	// Use this for initialization
+	void Start()
+	{
+		seed = Random.Range(int.MinValue,int.MaxValue);
+	}
+	
 	public static void EndManager()
 	{
 		if(Instance != null)

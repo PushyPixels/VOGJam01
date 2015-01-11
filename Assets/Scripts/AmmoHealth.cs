@@ -28,11 +28,8 @@ public class AmmoHealth : MonoBehaviour
 		if(angle < 45.0f || angle > 135.0f)
 		{
 			Debug.Log("Picked up health");
-
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			PlayerHealth playerHealth = player.GetComponentInParent<PlayerHealth>();
 			
-			playerHealth.currentHealth += healthAmount;
+			PlayerHealth.currentHealth += healthAmount;
 
 			Instantiate(healthEffect,transform.position,Quaternion.identity);
 		}

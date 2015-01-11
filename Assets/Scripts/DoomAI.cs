@@ -5,6 +5,8 @@ public class DoomAI : MonoBehaviour
 {
 	public float movementSpeed = 1.0f;
 	public float closestDistance = 1.0f;
+	public float damageDistance = 0.5f;
+	public float damagePerSecond = 1.0f;
 	public float health = 1.0f;
 
 	private GameObject player;
@@ -27,9 +29,16 @@ public class DoomAI : MonoBehaviour
 
 			transform.rotation = Quaternion.LookRotation(vectorToPlayer);
 
-			if(vectorToPlayer.magnitude > closestDistance)
+			float distance = vectorToPlayer.magnitude;
+
+			if(distance > closestDistance)
 			{
 				transform.position += transform.forward*movementSpeed*Time.deltaTime;
+			}
+
+			if(distance < damageDistance)
+			{
+				PlayerHealth.currentHealth -= damagePerSecond*Time.deltaTime;
 			}
 		}
 	}
