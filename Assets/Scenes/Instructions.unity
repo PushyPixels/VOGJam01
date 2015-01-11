@@ -103,8 +103,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1390031906}
   m_RootOrder: 0
-  m_AnchorMin: {x: .0500000007, y: .25}
-  m_AnchorMax: {x: .949999988, y: .75}
+  m_AnchorMin: {x: .0500000007, y: .0500000007}
+  m_AnchorMax: {x: .949999988, y: .949999988}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -123,20 +123,36 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 64
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 9
+    m_MinSize: 5
     m_MaxSize: 100
     m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Save Our Game, Tester!
+  m_Text: 'Welcome to PushyPixelCorp!
 
 
-    Press any key to play!'
+    Your job here is to find and tag any bugs in our game, Cactustein 3D!
+
+
+    It''s a pretty standard first person shooter, I am sure you''ll figure it out
+    quickly.  Tab is select weapon, left mouse button fires, WASD, shoot cactus men,
+    yada yada.
+
+
+    If you find a bug, use the right mouse button to tag the bugged object.
+
+
+    Infinite lives are enabled on this build.  If you find a bug in an object that
+    you ended up destroying or collecting before you tag it, just find a way to reset
+    level.  Cactus men can help.
+
+
+    Press any key to continue.'
 --- !u!222 &770363836
 CanvasRenderer:
   m_ObjectHideFlags: 0
