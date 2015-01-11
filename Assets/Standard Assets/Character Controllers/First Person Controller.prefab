@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11407126}
   - 114: {fileID: 11431526}
+  - 114: {fileID: 11405454}
   m_Layer: 8
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -431,6 +432,17 @@ MonoBehaviour:
 --- !u!1002 &11400007
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!114 &11405454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fc1107f0ca0417d9a2f561bb770713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11407126
 MonoBehaviour:
   m_ObjectHideFlags: 1
