@@ -9,13 +9,9 @@ public class PlayerHealth : MonoBehaviour
 	public float maxHealth = 100.0f;
 	private float _currentHealth;
 
-	void Awake()
-	{
-		Instance = this;
-	}
-
 	void Start()
 	{
+		Instance = this;
 		_currentHealth = initialHealth;
 	}
 
