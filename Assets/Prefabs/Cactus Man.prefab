@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marker: {fileID: 155896}
   brokenCollisionLayer: BrokenCollision
-  chanceOfBug: 1
+  chanceOfBug: .100000001
 --- !u!114 &11496798
 MonoBehaviour:
   m_ObjectHideFlags: 1
