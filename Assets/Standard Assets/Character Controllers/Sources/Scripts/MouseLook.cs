@@ -22,6 +22,21 @@ public class MouseLook : MonoBehaviour {
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
 
+	private float modifiedSensitivityX
+	{
+		get
+		{
+			return sensitivityX*60.0f;
+		}
+	}
+	private float modifiedSensitivityY
+	{
+		get
+		{
+			return sensitivityY*60.0f;
+		}
+	}
+
 	public float minimumX = -360F;
 	public float maximumX = 360F;
 
@@ -34,20 +49,20 @@ public class MouseLook : MonoBehaviour {
 	{
 		if (axes == RotationAxes.MouseXAndY)
 		{
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * modifiedSensitivityX * Time.deltaTime;
 			
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			rotationY += Input.GetAxis("Mouse Y") * modifiedSensitivityY * Time.deltaTime;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
-			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+			transform.Rotate(0, Input.GetAxis("Mouse X") * modifiedSensitivityX * Time.deltaTime, 0);
 		}
 		else
 		{
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			rotationY += Input.GetAxis("Mouse Y") * modifiedSensitivityY * Time.deltaTime;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);

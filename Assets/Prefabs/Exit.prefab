@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3351728}
   - 65: {fileID: 6551728}
   - 23: {fileID: 2351728}
-  - 114: {fileID: 11451728}
+  - 114: {fileID: 11488460}
   m_Layer: 9
   m_Name: Exit
   m_TagString: Untagged
@@ -70,7 +70,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11451728
+--- !u!114 &11488460
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,10 +78,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 151728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd566321653e453989cddca7a46b36f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d96a03a3037f44a6a6b5f98cdc64eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Test
+  objectToActivate: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
