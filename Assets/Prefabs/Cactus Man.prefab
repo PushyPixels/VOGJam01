@@ -16,6 +16,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &155896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 455896}
+  - 33: {fileID: 3355896}
+  - 23: {fileID: 2355896}
+  m_Layer: 0
+  m_Name: Marked
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &196798
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,6 +46,7 @@ GameObject:
   - 54: {fileID: 5436022}
   - 114: {fileID: 11496798}
   - 114: {fileID: 11402136}
+  - 114: {fileID: 11461666}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -48,6 +66,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496798}
   m_RootOrder: 0
+--- !u!4 &455896
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155896}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: -0, y: 1.35000002, z: .25}
+  m_LocalScale: {x: 2, y: 2.5, z: .100000001}
+  m_Children: []
+  m_Father: {fileID: 496798}
+  m_RootOrder: 1
 --- !u!4 &496798
 Transform:
   m_ObjectHideFlags: 1
@@ -59,8 +89,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431526}
+  - {fileID: 455896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!23 &2355896
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155896}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: d09f467e81e124970bcaa8da314c4037, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3355896
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155896}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &5436022
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -101,6 +159,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gib: {fileID: 126224, guid: 574f3b992f3de4cc794ce14cfb72836a, type: 2}
   objectToDestroy: {fileID: 196798}
+--- !u!114 &11461666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a280e83a53f4718a098607fe552e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 155896}
+  brokenCollisionLayer: BrokenCollision
+  chanceOfBug: .100000001
 --- !u!114 &11496798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +187,7 @@ MonoBehaviour:
   movementSpeed: 1
   closestDistance: 2
   damageDistance: 2.5
-  damagePerSecond: 5
+  damagePerSecond: 50
   health: 10
 --- !u!136 &13636022
 CapsuleCollider:
