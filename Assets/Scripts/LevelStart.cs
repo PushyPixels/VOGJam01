@@ -9,5 +9,6 @@ public class LevelStart : MonoBehaviour
 	{
 		Instance = this;
 		Random.seed = RandomManager.seed;
+		AmmoHealthBug.ClearBugs();
 	}
 }

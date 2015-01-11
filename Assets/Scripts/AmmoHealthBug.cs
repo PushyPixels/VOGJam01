@@ -6,9 +6,9 @@ public class AmmoHealthBug : MonoBehaviour
 {
 	public GameObject marker;
 	public string brokenCollisionLayer = "BrokenCollision";
-	public int originalLayer;
 	public float chanceOfBug = 0.1f;
 
+	private int originalLayer;
 	private bool bugged = false;
 	private bool marked = false;
 
@@ -17,6 +17,7 @@ public class AmmoHealthBug : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		ammoHealthBugs.Add(this);
 		originalLayer = gameObject.layer;
 		if(Random.value < chanceOfBug)
 		{
@@ -30,14 +31,9 @@ public class AmmoHealthBug : MonoBehaviour
 		}
 	}
 
-	void OnEnable()
+	public static void ClearBugs()
 	{
-		ammoHealthBugs.Add(this);
-	}
-	
-	void OnDisable()
-	{
-		ammoHealthBugs.Remove(this);
+		ammoHealthBugs.Clear();
 	}
 
 	void MarkBug()

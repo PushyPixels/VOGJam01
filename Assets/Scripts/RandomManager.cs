@@ -19,11 +19,7 @@ public class RandomManager : MonoBehaviour
 			return;
 		}
 		DontDestroyOnLoad(gameObject);
-	}
 
-	// Use this for initialization
-	void Start()
-	{
 		seed = Random.Range(int.MinValue,int.MaxValue);
 	}
 	
