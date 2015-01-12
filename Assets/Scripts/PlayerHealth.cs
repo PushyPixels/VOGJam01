@@ -15,6 +15,15 @@ public class PlayerHealth : MonoBehaviour
 		_currentHealth = initialHealth;
 	}
 
+	void Update()
+	{
+		if(transform.position.y <= -100.0f)
+		{
+			PlayerSingleton.EndManager();
+			Application.LoadLevel(Application.loadedLevel);
+		}
+	}
+
 	public static float currentHealth
 	{
 		get

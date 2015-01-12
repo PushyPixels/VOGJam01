@@ -10,16 +10,33 @@ public class DoomAI : MonoBehaviour
 	public float health = 1.0f;
 	public bool lookAtPlayer = true;
 
+	public float minIdleTime = 5.0f;
+	public float maxIdleTime = 10.0f;
+
+	public AudioClip[] idleClip;
+	public AudioClip[] damageClip;
+	public AudioSource playerDamageSource;
+	public GameObject deathSound;
+
 	private GameObject player;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+		Invoke ("PlayIdleSound",Random.Range(minIdleTime,maxIdleTime));
+	}
+
+	void PlayIdleSound()
+	{
+		audio.PlayOneShot(idleClip[Random.Range(0,idleClip.Length)]);
+		Invoke ("PlayIdleSound",Random.Range(minIdleTime,maxIdleTime));
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+
+
 		if(player == null)
 		{
 			player = GameObject.FindGameObjectWithTag("Player");
@@ -43,15 +60,25 @@ public class DoomAI : MonoBehaviour
 			if(distance < damageDistance)
 			{
 				PlayerHealth.currentHealth -= damagePerSecond*Time.deltaTime;
+				if(!playerDamageSource.isPlaying)
+				{
+					playerDamageSource.Play();
+				}
+			}
+			else
+			{
+				playerDamageSource.Stop();
 			}
 		}
 	}
 
 	void Damage(float amount)
 	{
+		audio.PlayOneShot(damageClip[Random.Range(0,damageClip.Length)]);
 		health -= amount;
 		if(health <= 0.0f)
 		{
+			Instantiate(deathSound,transform.position,Quaternion.identity);
 			BroadcastMessage("Die",SendMessageOptions.DontRequireReceiver);
 		}
 		//Destroy (gameObject);

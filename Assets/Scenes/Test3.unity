@@ -188,6 +188,7 @@ GameObject:
   - 114: {fileID: 12409162}
   - 114: {fileID: 12409161}
   - 114: {fileID: 12409160}
+  - 82: {fileID: 12409166}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -207,6 +208,7 @@ Transform:
   m_Children:
   - {fileID: 1421918305}
   - {fileID: 1522453006}
+  - {fileID: 1056356337}
   m_Father: {fileID: 0}
   m_RootOrder: 37
 --- !u!114 &12409160
@@ -253,7 +255,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1056356338}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &12409163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -307,6 +321,65 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be305b26c2b55481f8613d36512b8273, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!82 &12409166
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 196156413}
+  m_GameObject: {fileID: 12409158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &15633728
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +510,7 @@ GameObject:
   - 114: {fileID: 17316328}
   - 114: {fileID: 17316327}
   - 114: {fileID: 17316333}
+  - 82: {fileID: 17316334}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -473,7 +547,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1206506656}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &17316329
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -539,6 +625,7 @@ Transform:
   m_Children:
   - {fileID: 2055092123}
   - {fileID: 212493181}
+  - {fileID: 1206506657}
   m_Father: {fileID: 0}
   m_RootOrder: 27
 --- !u!114 &17316333
@@ -556,6 +643,65 @@ MonoBehaviour:
   marker: {fileID: 212493180}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &17316334
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 780822111}
+  m_GameObject: {fileID: 17316326}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &35579027
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +908,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1883384509}
   m_GameObject: {fileID: 42004172}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &47442261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 139697586}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 47442262}
+  - 82: {fileID: 47442263}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &47442262
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 139697586}
+  m_GameObject: {fileID: 47442261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1164651525}
+  m_RootOrder: 2
+--- !u!82 &47442263
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 139697586}
+  m_GameObject: {fileID: 47442261}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &49140464
 Prefab:
   m_ObjectHideFlags: 0
@@ -1608,6 +1841,7 @@ GameObject:
   - 114: {fileID: 146249329}
   - 114: {fileID: 146249328}
   - 114: {fileID: 146249327}
+  - 82: {fileID: 146249334}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -1659,7 +1893,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 2108430893}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &146249330
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1725,8 +1971,68 @@ Transform:
   m_Children:
   - {fileID: 1937990994}
   - {fileID: 1513970041}
+  - {fileID: 2108430892}
   m_Father: {fileID: 0}
   m_RootOrder: 38
+--- !u!82 &146249334
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434606161}
+  m_GameObject: {fileID: 146249326}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &155052079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2935,7 @@ GameObject:
   - 114: {fileID: 300481293}
   - 114: {fileID: 300481292}
   - 114: {fileID: 300481297}
+  - 82: {fileID: 300481298}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -2648,6 +2955,7 @@ Transform:
   m_Children:
   - {fileID: 2137597411}
   - {fileID: 898204081}
+  - {fileID: 1152461587}
   m_Father: {fileID: 0}
   m_RootOrder: 26
 --- !u!114 &300481292
@@ -2679,7 +2987,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1152461586}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &300481294
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2748,6 +3068,65 @@ MonoBehaviour:
   marker: {fileID: 898204080}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &300481298
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2110374919}
+  m_GameObject: {fileID: 300481290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &301147263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,6 +4226,93 @@ Transform:
   - {fileID: 906309542}
   m_Father: {fileID: 2048867077}
   m_RootOrder: 0
+--- !u!1 &434794583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1550728121}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 434794585}
+  - 82: {fileID: 434794584}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &434794584
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1550728121}
+  m_GameObject: {fileID: 434794583}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &434794585
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1550728121}
+  m_GameObject: {fileID: 434794583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2053660587}
+  m_RootOrder: 2
 --- !u!1001 &442598755
 Prefab:
   m_ObjectHideFlags: 0
@@ -4243,6 +4709,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1079871704}
   m_GameObject: {fileID: 462749480}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &500038495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1102020328}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 500038496}
+  - 82: {fileID: 500038497}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500038496
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1102020328}
+  m_GameObject: {fileID: 500038495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 743350245}
+  m_RootOrder: 2
+--- !u!82 &500038497
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1102020328}
+  m_GameObject: {fileID: 500038495}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &509109283
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,7 +4964,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 196798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 528200685}
@@ -4421,6 +4974,7 @@ GameObject:
   - 114: {fileID: 528200683}
   - 114: {fileID: 528200688}
   - 114: {fileID: 528200689}
+  - 82: {fileID: 528200690}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -4433,7 +4987,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11496798, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4444,13 +4998,25 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 942738959}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!212 &528200684
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21296798, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_Enabled: 1
   m_CastShadows: 0
@@ -4472,7 +5038,7 @@ SpriteRenderer:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 21.5699997}
@@ -4480,6 +5046,7 @@ Transform:
   m_Children:
   - {fileID: 666675130}
   - {fileID: 1180512341}
+  - {fileID: 942738960}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!136 &528200686
@@ -4487,7 +5054,7 @@ CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13636022, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4501,7 +5068,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5436022, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   serializedVersion: 2
   m_Mass: 1
@@ -4517,7 +5084,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11402136, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4530,7 +5097,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11461666, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 528200682}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4540,6 +5107,65 @@ MonoBehaviour:
   marker: {fileID: 1180512340}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &528200690
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 943281663}
+  m_GameObject: {fileID: 528200682}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &533993794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,6 +5238,7 @@ GameObject:
   - 114: {fileID: 544956584}
   - 114: {fileID: 544956583}
   - 114: {fileID: 544956588}
+  - 82: {fileID: 544956589}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -4631,6 +5258,7 @@ Transform:
   m_Children:
   - {fileID: 1023453247}
   - {fileID: 1848309268}
+  - {fileID: 580767182}
   m_Father: {fileID: 0}
   m_RootOrder: 23
 --- !u!114 &544956583
@@ -4662,7 +5290,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 580767183}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &544956585
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4731,6 +5371,65 @@ MonoBehaviour:
   marker: {fileID: 1848309267}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &544956589
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 512707398}
+  m_GameObject: {fileID: 544956581}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &552039372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5016,6 +5715,93 @@ Transform:
   - {fileID: 641692347}
   m_Father: {fileID: 2048867077}
   m_RootOrder: 1
+--- !u!1 &580767181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 512707398}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 580767182}
+  - 82: {fileID: 580767183}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580767182
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 512707398}
+  m_GameObject: {fileID: 580767181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 544956582}
+  m_RootOrder: 2
+--- !u!82 &580767183
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 512707398}
+  m_GameObject: {fileID: 580767181}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &582673809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5892,11 +6678,98 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1102020328}
   m_GameObject: {fileID: 661127677}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &662048830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 49140464}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 662048831}
+  - 82: {fileID: 662048832}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &662048831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 49140464}
+  m_GameObject: {fileID: 662048830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 668614027}
+  m_RootOrder: 2
+--- !u!82 &662048832
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 49140464}
+  m_GameObject: {fileID: 662048830}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &666675128
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 131526, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 666675130}
@@ -5913,7 +6786,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11431526, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 666675128}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5926,7 +6799,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 431526, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 666675128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
@@ -5948,6 +6821,7 @@ GameObject:
   - 114: {fileID: 668614029}
   - 114: {fileID: 668614028}
   - 114: {fileID: 668614033}
+  - 82: {fileID: 668614034}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -5967,6 +6841,7 @@ Transform:
   m_Children:
   - {fileID: 1730039908}
   - {fileID: 1918830787}
+  - {fileID: 662048831}
   m_Father: {fileID: 0}
   m_RootOrder: 22
 --- !u!114 &668614028
@@ -5998,7 +6873,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 662048832}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &668614030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6067,6 +6954,65 @@ MonoBehaviour:
   marker: {fileID: 1918830784}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &668614034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 49140464}
+  m_GameObject: {fileID: 668614026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &701539655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +7531,7 @@ GameObject:
   - 114: {fileID: 743350247}
   - 114: {fileID: 743350246}
   - 114: {fileID: 743350251}
+  - 82: {fileID: 743350252}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -6604,6 +7551,7 @@ Transform:
   m_Children:
   - {fileID: 357035552}
   - {fileID: 661127678}
+  - {fileID: 500038496}
   m_Father: {fileID: 0}
   m_RootOrder: 25
 --- !u!114 &743350246
@@ -6635,7 +7583,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 500038497}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &743350248
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6704,6 +7664,65 @@ MonoBehaviour:
   marker: {fileID: 661127677}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &743350252
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1102020328}
+  m_GameObject: {fileID: 743350244}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &751737876
 GameObject:
   m_ObjectHideFlags: 0
@@ -6898,6 +7917,7 @@ GameObject:
   - 114: {fileID: 771092000}
   - 114: {fileID: 771091999}
   - 114: {fileID: 771092004}
+  - 82: {fileID: 771092005}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -6917,6 +7937,7 @@ Transform:
   m_Children:
   - {fileID: 1481159444}
   - {fileID: 832062995}
+  - {fileID: 919873501}
   m_Father: {fileID: 0}
   m_RootOrder: 20
 --- !u!114 &771091999
@@ -6948,7 +7969,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 919873500}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &771092001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7017,6 +8050,65 @@ MonoBehaviour:
   marker: {fileID: 832062992}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &771092005
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1297504118}
+  m_GameObject: {fileID: 771091997}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &772534965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,6 +8319,7 @@ GameObject:
   - 114: {fileID: 807540792}
   - 114: {fileID: 807540791}
   - 114: {fileID: 807540796}
+  - 82: {fileID: 807540797}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -7246,6 +8339,7 @@ Transform:
   m_Children:
   - {fileID: 1944292887}
   - {fileID: 1548102663}
+  - {fileID: 2062943901}
   m_Father: {fileID: 0}
   m_RootOrder: 24
 --- !u!114 &807540791
@@ -7277,7 +8371,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 2062943900}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &807540793
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7346,6 +8452,65 @@ MonoBehaviour:
   marker: {fileID: 1548102662}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &807540797
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2031173689}
+  m_GameObject: {fileID: 807540789}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &820459713
 GameObject:
   m_ObjectHideFlags: 0
@@ -7575,6 +8740,93 @@ Prefab:
   m_RootGameObject: {fileID: 2036580474}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &851761870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1730457838}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 851761871}
+  - 82: {fileID: 851761872}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851761871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1730457838}
+  m_GameObject: {fileID: 851761870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1689899247}
+  m_RootOrder: 2
+--- !u!82 &851761872
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1730457838}
+  m_GameObject: {fileID: 851761870}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &854860991
 GameObject:
   m_ObjectHideFlags: 0
@@ -8029,6 +9281,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1126168754}
   m_GameObject: {fileID: 917490343}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &919873499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1297504118}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 919873501}
+  - 82: {fileID: 919873500}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &919873500
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1297504118}
+  m_GameObject: {fileID: 919873499}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &919873501
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1297504118}
+  m_GameObject: {fileID: 919873499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 771091998}
+  m_RootOrder: 2
 --- !u!1 &930724402
 GameObject:
   m_ObjectHideFlags: 0
@@ -8209,6 +9548,137 @@ MonoBehaviour:
   marker: {fileID: 173745512}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .25
+--- !u!1 &942738958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 943281663}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 942738960}
+  - 82: {fileID: 942738959}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &942738959
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 943281663}
+  m_GameObject: {fileID: 942738958}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &942738960
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 943281663}
+  m_GameObject: {fileID: 942738958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 528200685}
+  m_RootOrder: 2
+--- !u!1001 &943281663
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 21.5699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -1.62920685e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_RootGameObject: {fileID: 528200682}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &952305656
 GameObject:
   m_ObjectHideFlags: 0
@@ -8889,6 +10359,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1079871704}
   m_GameObject: {fileID: 1010261053}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1021537026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 858835442}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1021537027}
+  - 82: {fileID: 1021537028}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021537027
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 858835442}
+  m_GameObject: {fileID: 1021537026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1213411407}
+  m_RootOrder: 2
+--- !u!82 &1021537028
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 858835442}
+  m_GameObject: {fileID: 1021537026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1023453245
 GameObject:
   m_ObjectHideFlags: 0
@@ -9037,6 +10594,7 @@ GameObject:
   - 114: {fileID: 1043896479}
   - 114: {fileID: 1043896478}
   - 114: {fileID: 1043896484}
+  - 82: {fileID: 1043896485}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -9073,7 +10631,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1215381702}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1043896480
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9139,6 +10709,7 @@ Transform:
   m_Children:
   - {fileID: 1536556787}
   - {fileID: 1746448698}
+  - {fileID: 1215381701}
   m_Father: {fileID: 0}
   m_RootOrder: 29
 --- !u!114 &1043896484
@@ -9156,6 +10727,65 @@ MonoBehaviour:
   marker: {fileID: 1746448697}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1043896485
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2009176539}
+  m_GameObject: {fileID: 1043896477}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1046519738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,6 +10859,180 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2053660587}
   m_RootOrder: 0
+--- !u!1 &1056356336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 196156413}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1056356337}
+  - 82: {fileID: 1056356338}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056356337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 196156413}
+  m_GameObject: {fileID: 1056356336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 12409159}
+  m_RootOrder: 2
+--- !u!82 &1056356338
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 196156413}
+  m_GameObject: {fileID: 1056356336}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!1 &1058603578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 299889436}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1058603579}
+  - 82: {fileID: 1058603580}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058603579
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 299889436}
+  m_GameObject: {fileID: 1058603578}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2135306090}
+  m_RootOrder: 2
+--- !u!82 &1058603580
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 299889436}
+  m_GameObject: {fileID: 1058603578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1063945982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9287,54 +11091,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1127108171}
   m_GameObject: {fileID: 1063945982}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1066819895
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 21.5699997
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -1.62920685e-07
-      objectReference: {fileID: 0}
-    - target: {fileID: 496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11496798, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-      propertyPath: damagePerSecond
-      value: 50
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_RootGameObject: {fileID: 528200682}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1067352702
 GameObject:
   m_ObjectHideFlags: 0
@@ -10112,6 +11868,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 858835442}
   m_GameObject: {fileID: 1133905441}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1135814261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 442598755}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1135814262}
+  - 82: {fileID: 1135814263}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135814262
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 442598755}
+  m_GameObject: {fileID: 1135814261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1288240148}
+  m_RootOrder: 2
+--- !u!82 &1135814263
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 442598755}
+  m_GameObject: {fileID: 1135814261}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1141869080
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,6 +12055,93 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gib: {fileID: 126224, guid: 574f3b992f3de4cc794ce14cfb72836a, type: 2}
   objectToDestroy: {fileID: 1689899241}
+--- !u!1 &1152461585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2110374919}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1152461587}
+  - 82: {fileID: 1152461586}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1152461586
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2110374919}
+  m_GameObject: {fileID: 1152461585}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1152461587
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2110374919}
+  m_GameObject: {fileID: 1152461585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300481291}
+  m_RootOrder: 2
 --- !u!1 &1164651519
 GameObject:
   m_ObjectHideFlags: 0
@@ -10226,6 +12156,7 @@ GameObject:
   - 114: {fileID: 1164651521}
   - 114: {fileID: 1164651520}
   - 114: {fileID: 1164651526}
+  - 82: {fileID: 1164651527}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -10262,7 +12193,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 47442263}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1164651522
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10328,6 +12271,7 @@ Transform:
   m_Children:
   - {fileID: 987281522}
   - {fileID: 17066080}
+  - {fileID: 47442262}
   m_Father: {fileID: 0}
   m_RootOrder: 35
 --- !u!114 &1164651526
@@ -10345,6 +12289,65 @@ MonoBehaviour:
   marker: {fileID: 17066077}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1164651527
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 139697586}
+  m_GameObject: {fileID: 1164651519}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1169937820
 GameObject:
   m_ObjectHideFlags: 0
@@ -10391,7 +12394,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 155896, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1180512341}
@@ -10408,7 +12411,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 455896, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 1180512340}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: -0, y: 1.35000002, z: .25}
@@ -10421,7 +12424,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2355896, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 1180512340}
   m_Enabled: 1
   m_CastShadows: 1
@@ -10442,7 +12445,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3355896, guid: 19e1b61b566a546df9fa4db1e5c9c575,
     type: 2}
-  m_PrefabInternal: {fileID: 1066819895}
+  m_PrefabInternal: {fileID: 943281663}
   m_GameObject: {fileID: 1180512340}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1181571957
@@ -10716,6 +12719,93 @@ Prefab:
   m_RootGameObject: {fileID: 1917604417}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1206506655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 780822111}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1206506657}
+  - 82: {fileID: 1206506656}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1206506656
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 780822111}
+  m_GameObject: {fileID: 1206506655}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1206506657
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 780822111}
+  m_GameObject: {fileID: 1206506655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 17316332}
+  m_RootOrder: 2
 --- !u!1 &1211850006
 GameObject:
   m_ObjectHideFlags: 0
@@ -10820,6 +12910,7 @@ GameObject:
   - 114: {fileID: 1213411409}
   - 114: {fileID: 1213411408}
   - 114: {fileID: 1213411413}
+  - 82: {fileID: 1213411414}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -10839,6 +12930,7 @@ Transform:
   m_Children:
   - {fileID: 1846026031}
   - {fileID: 1133905442}
+  - {fileID: 1021537027}
   m_Father: {fileID: 0}
   m_RootOrder: 19
 --- !u!114 &1213411408
@@ -10870,7 +12962,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1021537028}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1213411410
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10939,6 +13043,65 @@ MonoBehaviour:
   marker: {fileID: 1133905441}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1213411414
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 858835442}
+  m_GameObject: {fileID: 1213411406}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1214073375
 GameObject:
   m_ObjectHideFlags: 0
@@ -10997,6 +13160,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1883384509}
   m_GameObject: {fileID: 1214073375}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1215381700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2009176539}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1215381701}
+  - 82: {fileID: 1215381702}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1215381701
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2009176539}
+  m_GameObject: {fileID: 1215381700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1043896483}
+  m_RootOrder: 2
+--- !u!82 &1215381702
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2009176539}
+  m_GameObject: {fileID: 1215381700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1222787239
 Prefab:
   m_ObjectHideFlags: 0
@@ -11195,6 +13445,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1127108171}
   m_GameObject: {fileID: 1236545833}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1250371253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1091198301}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1250371255}
+  - 82: {fileID: 1250371254}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1250371254
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1091198301}
+  m_GameObject: {fileID: 1250371253}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1250371255
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1091198301}
+  m_GameObject: {fileID: 1250371253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1402691690}
+  m_RootOrder: 2
 --- !u!1 &1258199988
 GameObject:
   m_ObjectHideFlags: 0
@@ -11585,6 +13922,7 @@ GameObject:
   - 114: {fileID: 1288240150}
   - 114: {fileID: 1288240149}
   - 114: {fileID: 1288240154}
+  - 82: {fileID: 1288240155}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -11604,6 +13942,7 @@ Transform:
   m_Children:
   - {fileID: 734491815}
   - {fileID: 1910886007}
+  - {fileID: 1135814262}
   m_Father: {fileID: 0}
   m_RootOrder: 21
 --- !u!114 &1288240149
@@ -11635,7 +13974,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1135814263}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1288240151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11704,6 +14055,65 @@ MonoBehaviour:
   marker: {fileID: 1910886006}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1288240155
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 442598755}
+  m_GameObject: {fileID: 1288240147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1297504118
 Prefab:
   m_ObjectHideFlags: 0
@@ -12383,6 +14793,7 @@ GameObject:
   - 114: {fileID: 1402691686}
   - 114: {fileID: 1402691685}
   - 114: {fileID: 1402691684}
+  - 82: {fileID: 1402691691}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -12434,7 +14845,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1250371254}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1402691687
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12500,8 +14923,68 @@ Transform:
   m_Children:
   - {fileID: 995770029}
   - {fileID: 1786292388}
+  - {fileID: 1250371255}
   m_Father: {fileID: 0}
   m_RootOrder: 36
+--- !u!82 &1402691691
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1091198301}
+  m_GameObject: {fileID: 1402691683}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1420810061
 GameObject:
   m_ObjectHideFlags: 0
@@ -13192,6 +15675,93 @@ Transform:
   m_LocalScale: {x: 3.7117548, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1225061032}
+  m_RootOrder: 2
+--- !u!1 &1464200690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1043716097}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1464200692}
+  - 82: {fileID: 1464200691}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1464200691
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1043716097}
+  m_GameObject: {fileID: 1464200690}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1464200692
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1043716097}
+  m_GameObject: {fileID: 1464200690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1761364084}
   m_RootOrder: 2
 --- !u!1001 &1475679797
 Prefab:
@@ -14124,6 +16694,93 @@ Prefab:
   m_RootGameObject: {fileID: 2053660586}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1577158529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 389548820}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1577158530}
+  - 82: {fileID: 1577158531}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1577158530
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 389548820}
+  m_GameObject: {fileID: 1577158529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2095255490}
+  m_RootOrder: 2
+--- !u!82 &1577158531
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 389548820}
+  m_GameObject: {fileID: 1577158529}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1580527143
 GameObject:
   m_ObjectHideFlags: 0
@@ -14844,6 +17501,7 @@ GameObject:
   - 114: {fileID: 1689899243}
   - 114: {fileID: 1689899242}
   - 114: {fileID: 1689899248}
+  - 82: {fileID: 1689899249}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -14880,7 +17538,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 851761872}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1689899244
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14946,6 +17616,7 @@ Transform:
   m_Children:
   - {fileID: 1148542892}
   - {fileID: 772534966}
+  - {fileID: 851761871}
   m_Father: {fileID: 0}
   m_RootOrder: 18
 --- !u!114 &1689899248
@@ -14963,6 +17634,65 @@ MonoBehaviour:
   marker: {fileID: 772534965}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1689899249
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1730457838}
+  m_GameObject: {fileID: 1689899241}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1689909790
 GameObject:
   m_ObjectHideFlags: 0
@@ -15975,6 +18705,7 @@ GameObject:
   - 114: {fileID: 1761364086}
   - 114: {fileID: 1761364085}
   - 114: {fileID: 1761364090}
+  - 82: {fileID: 1761364091}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -15994,6 +18725,7 @@ Transform:
   m_Children:
   - {fileID: 1916935720}
   - {fileID: 59757696}
+  - {fileID: 1464200692}
   m_Father: {fileID: 0}
   m_RootOrder: 34
 --- !u!114 &1761364085
@@ -16025,7 +18757,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1464200691}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1761364087
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16094,6 +18838,65 @@ MonoBehaviour:
   marker: {fileID: 59757695}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &1761364091
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1043716097}
+  m_GameObject: {fileID: 1761364083}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1782007546
 GameObject:
   m_ObjectHideFlags: 0
@@ -16578,6 +19381,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 512707398}
   m_GameObject: {fileID: 1848309267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1854719197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1285980394}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1854719198}
+  - 82: {fileID: 1854719199}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854719198
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1285980394}
+  m_GameObject: {fileID: 1854719197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894708809}
+  m_RootOrder: 2
+--- !u!82 &1854719199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1285980394}
+  m_GameObject: {fileID: 1854719197}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1883384509
 Prefab:
   m_ObjectHideFlags: 0
@@ -16734,6 +19624,7 @@ GameObject:
   - 114: {fileID: 1894708805}
   - 114: {fileID: 1894708804}
   - 114: {fileID: 1894708803}
+  - 82: {fileID: 1894708810}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -16785,7 +19676,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1854719199}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &1894708806
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16851,8 +19754,68 @@ Transform:
   m_Children:
   - {fileID: 1626357450}
   - {fileID: 137214041}
+  - {fileID: 1854719198}
   m_Father: {fileID: 0}
   m_RootOrder: 39
+--- !u!82 &1894708810
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1285980394}
+  m_GameObject: {fileID: 1894708802}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1896226795
 Prefab:
   m_ObjectHideFlags: 0
@@ -18211,6 +21174,7 @@ GameObject:
   - 114: {fileID: 2053660589}
   - 114: {fileID: 2053660588}
   - 114: {fileID: 2053660593}
+  - 82: {fileID: 2053660594}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -18230,6 +21194,7 @@ Transform:
   m_Children:
   - {fileID: 1055424759}
   - {fileID: 1689909791}
+  - {fileID: 434794585}
   m_Father: {fileID: 0}
   m_RootOrder: 28
 --- !u!114 &2053660588
@@ -18261,7 +21226,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 434794584}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &2053660590
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18330,6 +21307,65 @@ MonoBehaviour:
   marker: {fileID: 1689909790}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &2053660594
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1550728121}
+  m_GameObject: {fileID: 2053660586}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2055092122
 GameObject:
   m_ObjectHideFlags: 0
@@ -18494,6 +21530,93 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2062943899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2031173689}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2062943901}
+  - 82: {fileID: 2062943900}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2062943900
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 2031173689}
+  m_GameObject: {fileID: 2062943899}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &2062943901
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 2031173689}
+  m_GameObject: {fileID: 2062943899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 807540790}
+  m_RootOrder: 2
 --- !u!1 &2066169586
 GameObject:
   m_ObjectHideFlags: 0
@@ -18714,6 +21837,7 @@ GameObject:
   - 114: {fileID: 2095255486}
   - 114: {fileID: 2095255485}
   - 114: {fileID: 2095255491}
+  - 82: {fileID: 2095255492}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -18750,7 +21874,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1577158531}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &2095255487
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18816,6 +21952,7 @@ Transform:
   m_Children:
   - {fileID: 1991138}
   - {fileID: 144202453}
+  - {fileID: 1577158530}
   m_Father: {fileID: 0}
   m_RootOrder: 33
 --- !u!114 &2095255491
@@ -18833,6 +21970,65 @@ MonoBehaviour:
   marker: {fileID: 144202452}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &2095255492
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 389548820}
+  m_GameObject: {fileID: 2095255484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2098596861
 GameObject:
   m_ObjectHideFlags: 0
@@ -18918,6 +22114,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1127108171}
   m_GameObject: {fileID: 2106880195}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2108430891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1434606161}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2108430892}
+  - 82: {fileID: 2108430893}
+  m_Layer: 0
+  m_Name: DamageAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108430892
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412882, guid: 19e1b61b566a546df9fa4db1e5c9c575, type: 2}
+  m_PrefabInternal: {fileID: 1434606161}
+  m_GameObject: {fileID: 2108430891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 146249333}
+  m_RootOrder: 2
+--- !u!82 &2108430893
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212880, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434606161}
+  m_GameObject: {fileID: 2108430891}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 207150947ecb549a8bde2f139bae2874, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2108538845
 GameObject:
   m_ObjectHideFlags: 0
@@ -19125,6 +22408,7 @@ GameObject:
   - 114: {fileID: 2135306086}
   - 114: {fileID: 2135306085}
   - 114: {fileID: 2135306091}
+  - 82: {fileID: 2135306092}
   m_Layer: 0
   m_Name: Cactus Man
   m_TagString: Untagged
@@ -19161,7 +22445,19 @@ MonoBehaviour:
   closestDistance: 2
   damageDistance: 2.5
   damagePerSecond: 50
-  health: 10
+  health: 6
+  lookAtPlayer: 1
+  minIdleTime: 10
+  maxIdleTime: 30
+  idleClip:
+  - {fileID: 8300000, guid: 5d25d320b255240cbb593ca058781279, type: 3}
+  - {fileID: 8300000, guid: 81784494f88b147128177edf59557fa1, type: 3}
+  - {fileID: 8300000, guid: d5fd43e6721b64f1db470139741e66eb, type: 3}
+  damageClip:
+  - {fileID: 8300000, guid: 98588b66e636f44a1822f8a2c6ef2160, type: 3}
+  - {fileID: 8300000, guid: ac759dc16146f4301b69a8fd089abe69, type: 3}
+  playerDamageSource: {fileID: 1058603580}
+  deathSound: {fileID: 189886, guid: ee8c33657502f4631892b232a271abc6, type: 2}
 --- !u!54 &2135306087
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19227,6 +22523,7 @@ Transform:
   m_Children:
   - {fileID: 1169937821}
   - {fileID: 2066169589}
+  - {fileID: 1058603579}
   m_Father: {fileID: 0}
   m_RootOrder: 17
 --- !u!114 &2135306091
@@ -19244,6 +22541,65 @@ MonoBehaviour:
   marker: {fileID: 2066169586}
   brokenCollisionLayer: BrokenCollision
   chanceOfBug: .100000001
+--- !u!82 &2135306092
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8212882, guid: 19e1b61b566a546df9fa4db1e5c9c575,
+    type: 2}
+  m_PrefabInternal: {fileID: 299889436}
+  m_GameObject: {fileID: 2135306084}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2137597409
 GameObject:
   m_ObjectHideFlags: 0
