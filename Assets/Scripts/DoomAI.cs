@@ -28,8 +28,11 @@ public class DoomAI : MonoBehaviour
 
 	void PlayIdleSound()
 	{
-		audio.PlayOneShot(idleClip[Random.Range(0,idleClip.Length)]);
-		Invoke ("PlayIdleSound",Random.Range(minIdleTime,maxIdleTime));
+		if(idleClip.Length > 0)
+		{
+			audio.PlayOneShot(idleClip[Random.Range(0,idleClip.Length)]);
+			Invoke ("PlayIdleSound",Random.Range(minIdleTime,maxIdleTime));
+		}
 	}
 	
 	// Update is called once per frame

@@ -37,6 +37,7 @@ public class Gun : MonoBehaviour
 	protected virtual void Fire()
 	{
 		_currentAmmo--;
+		audio.Play();
 		_canFire = false;
 		Invoke("CanFireNow", fireDelay);
 	}
