@@ -333,7 +333,7 @@ MonoBehaviour:
   movementSpeed: 1
   closestDistance: 2
   damageDistance: 2.5
-  damagePerSecond: 50
+  damagePerSecond: 10
   health: 6
   lookAtPlayer: 1
   minIdleTime: 10

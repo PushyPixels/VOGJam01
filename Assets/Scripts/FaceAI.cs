@@ -5,8 +5,11 @@ public class FaceAI : MonoBehaviour
 {
 	public float movementSpeed = 1.0f;
 	public float closestDistance = 1.0f;
+	public float damageDistance = 0.5f;
+	public float damagePerSecond = 1.0f;
 	public float health = 1.0f;
 
+	public AudioSource playerDamageSource;
 	public AudioClip hitSound;
 	public GameObject deathSound;
 
@@ -57,10 +60,25 @@ public class FaceAI : MonoBehaviour
 			Vector3 vectorToPlayer = player.transform.position - transform.position;
 			
 			transform.rotation = Quaternion.LookRotation(vectorToPlayer);
-			
-			if(vectorToPlayer.magnitude > closestDistance)
+
+			float distance = vectorToPlayer.magnitude;
+
+			if(distance > closestDistance)
 			{
 				transform.position += transform.forward*movementSpeed*Time.deltaTime;
+			}
+
+			if(distance < damageDistance)
+			{
+				PlayerHealth.currentHealth -= damagePerSecond*Time.deltaTime;
+				if(!playerDamageSource.isPlaying)
+				{
+					playerDamageSource.Play();
+				}
+			}
+			else
+			{
+				playerDamageSource.Stop();
 			}
 		}
 	}
