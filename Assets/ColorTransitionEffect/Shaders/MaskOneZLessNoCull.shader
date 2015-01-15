@@ -1,10 +1,11 @@
-﻿Shader "Custom/Stencil/Mask OneZLess"
+﻿Shader "Custom/Stencil/Mask OneZLess NoCull"
 {
     SubShader
     {
         Tags { "RenderType"="Opaque" "Queue"="Geometry-1" }
         ColorMask 0
         ZWrite off
+        Cull off
         
         Stencil
         {
@@ -36,7 +37,6 @@
         
         Pass
         {
-            Cull Back
             ZTest Less
         
             CGPROGRAM
